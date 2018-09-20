@@ -104,22 +104,22 @@
         display: none;
     }
 
-    .mobile-nav-icon {
+    /* .mobile-nav-icon {
         display: inline-block;
-    }
+    } */
 
-    .main-nav {
+    .sticky .main-nav {
         float: left;
         margin-top: 35px;
-        margin-left: 25px;
+        margin-left: 0;
     }
 
-    .main-nav li {
+    .sticky .main-nav li {
         display: block;
     }
 
-    .main-nav li a:link,
-    .main-nav li a:visited {
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
         display: block;
         border: 0;
         padding: 10px 0;
@@ -232,5 +232,11 @@
 
     .contact-form {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h2 {
+        font-size: 125%;
     }
 }

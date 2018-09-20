@@ -22,7 +22,17 @@ function loadEvents() {
     // For sticky navigation
     new Waypoint({
         element: document.getElementById('_section-features'),
-        handler: () => document.querySelector('nav').classList.toggle('sticky'),
+        handler: direction => {
+            document.querySelector('nav').classList.toggle('sticky');
+            if (window.innerWidth < 768) {
+                if (direction === 'down')
+                    document.getElementById('_nav-icon').style.display =
+                        'inline-block';
+                else {
+                    document.getElementById('_nav-icon').style.display = 'none';
+                }
+            }
+        },
         offset: '60px',
     });
 
@@ -37,21 +47,21 @@ function loadEvents() {
         duration: 1000,
         origin: 'bottom',
         distance: '250px',
-        viewFactor: 0.9,
+        viewFactor: 0.7,
     });
 
     sr.reveal('.fade-left', {
         duration: 1500,
         origin: 'left',
         distance: '250px',
-        viewFactor: 0.8,
+        viewFactor: 0.45,
     });
 
     sr.reveal('.fade-right', {
         duration: 1500,
         origin: 'right',
         distance: '250px',
-        viewFactor: 0.8,
+        viewFactor: 0.45,
     });
 
     new Waypoint({
