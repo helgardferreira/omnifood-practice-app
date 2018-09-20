@@ -44,14 +44,14 @@ function loadEvents() {
         duration: 1500,
         origin: 'left',
         distance: '250px',
-        viewFactor: 0.45,
+        viewFactor: 0.6,
     });
 
     sr.reveal('.fade-right', {
         duration: 1500,
         origin: 'right',
         distance: '250px',
-        viewFactor: 0.45,
+        viewFactor: 0.6,
     });
 
     new Waypoint({
