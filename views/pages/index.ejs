@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+  <meta name="description" content="Omnifood is a project from Jonas Schmedtmann's CSS3 and HTML5 Udemy Course. This iteration of the project is heavily modified.">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link rel="stylesheet" type="text/css" href="/vendors/css/animate.css">
   <link rel="stylesheet" type="text/css" href="/vendors/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/vendors/css/grid.css">
   <link rel="stylesheet" type="text/css" href="/resources/css/style.css">
@@ -13,7 +15,18 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,300i,400" rel="stylesheet">
   <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
   <link href="https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.2/dist/scrollreveal.min.js"></script>
   <title>Omnifood</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/resources/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -23,24 +36,28 @@
     <nav>
       <div class="row">
         <img src="resources/img/logo-white.png" alt="Omnifood Logo" class="logo">
-        <ul class="main-nav">
-          <li><a href="#">Food delivery</a></li>
-          <li><a href="#">How it works</a></li>
-          <li><a href="#">Our cities</a></li>
-          <li><a href="#">Sign up</a></li>
+        <img src="resources/img/logo.png" alt="Omnifood Logo" class="logo-black">
+        <ul class="main-nav" id="_main-nav">
+          <li><a href="#" id="_food-link">Food delivery</a></li>
+          <li><a href="#" id="_steps-link">How it works</a></li>
+          <li><a href="#" id="_cities-link">Our cities</a></li>
+          <li><a href="#" id="_signup-link">Sign up</a></li>
         </ul>
+        <a class="mobile-nav-icon" id="_nav-icon">
+          <ion-icon name="menu"></ion-icon>
+        </a>
       </div>
     </nav>
 
     <div class="hero-text-box">
       <h1>Goodbye junk food.<br>Hello super healthy meals.</h1>
-      <a class="btn btn-full" id="btn-hungry" href="#">I’m hungry</a>
-      <a class="btn btn-ghost" href="#">Show me more</a>
+      <a class="btn btn-full btn-hungry" id="_btn-scroll-plans" href="#">I’m hungry</a>
+      <a class="btn btn-ghost" id="_btn-scroll-start" href="#">Show me more</a>
     </div>
 
   </header>
 
-  <section class="section-features">
+  <section class="section-features" id="_section-features">
 
     <div class="row">
       <h2>Get food fast &mdash; not fast food</h2>
@@ -50,7 +67,7 @@
       </p>
     </div>
 
-    <div class="row">
+    <div class="row load-hidden" id="_waypoint-features">
       <div class="col span-1-of-4 box">
         <ion-icon class="icon-big" name="infinite"></ion-icon>
         <h3>Up to 365 days/year</h3>
@@ -81,6 +98,10 @@
     </div>
 
   </section>
+
+  <h1 class="headline">
+    Widget Inc.
+  </h1>
 
   <section class="section-meals clearfix">
     <ul class="meals-showcase">
@@ -136,13 +157,13 @@
     </ul>
   </section>
 
-  <section class="section-steps">
+  <section class="section-steps" id="_section-steps">
     <div class="row">
       <h2>How it works &mdash; Simple as 1, 2, 3</h2>
     </div>
     <div class="row">
       <div class="col span-1-of-2 steps-box">
-        <img src="resources/img/app-iPhone.png" alt="Omnifood app on iPhone" class="app-screen">
+        <img src="resources/img/app-iPhone.png" alt="Omnifood app on iPhone" class="app-screen load-hidden">
       </div>
       <div class="col span-1-of-2 steps-box">
         <div class="works-step">
@@ -164,13 +185,13 @@
     </div>
   </section>
 
-  <section class="section-cities">
+  <section class="section-cities" id="_section-cities">
     <div class="row">
       <h2>We're currently in these cities</h2>
     </div>
     <div class="row">
       <div class="col span-1-of-4 box">
-        <img src="resources/img/lisbon-3.jpg" class="city-image" alt="Lisbon">
+        <img src="resources/img/lisbon-3.jpg" class="city-image fade-left load-hidden" alt="Lisbon">
         <h3>Lisbon</h3>
         <div class="city-feature">
           <ion-icon class="icon-small" name="person"></ion-icon>
@@ -186,7 +207,7 @@
         </div>
       </div>
       <div class="col span-1-of-4 box">
-        <img src="resources/img/san-francisco.jpg" class="city-image" alt="San Francisco">
+        <img src="resources/img/san-francisco.jpg" class="city-image fade-left load-hidden" alt="San Francisco">
         <h3>San Francisco</h3>
         <div class="city-feature">
           <ion-icon class="icon-small" name="person"></ion-icon>
@@ -202,7 +223,7 @@
         </div>
       </div>
       <div class="col span-1-of-4 box">
-        <img src="resources/img/berlin.jpg" class="city-image" alt="Berlin">
+        <img src="resources/img/berlin.jpg" class="city-image fade-right load-hidden" alt="Berlin">
         <h3>Berlin</h3>
         <div class="city-feature">
           <ion-icon class="icon-small" name="person"></ion-icon>
@@ -218,7 +239,7 @@
         </div>
       </div>
       <div class="col span-1-of-4 box">
-        <img src="resources/img/london.jpg" class="city-image" alt="London">
+        <img src="resources/img/london.jpg" class="city-image fade-right load-hidden" alt="London">
         <h3>London</h3>
         <div class="city-feature">
           <ion-icon class="icon-small" name="person"></ion-icon>
@@ -274,13 +295,13 @@
     </div>
   </section>
 
-  <section class="section-plans">
+  <section class="section-plans" id="_section-plans">
     <div class="row">
       <h2>Start eating healthy today</h2>
     </div>
     <div class="row">
       <div class="col span-1-of-3">
-        <div class="plan-box">
+        <div class="plan-box" id="_premium">
           <div>
             <h3>Premium</h3>
             <p class="plan-price">$399 <span>/ month</span></p>
@@ -289,16 +310,16 @@
           <div>
             <ul>
               <li>
-                <i class="icon ion-md-checkmark icon-small"></i></ion-icon>1 meal every day
+                <i class="icon ion-md-checkmark icon-small"></i>1 meal every day
               </li>
               <li>
-                <i class="icon ion-md-checkmark icon-small"></i></ion-icon>Order 24/7
+                <i class="icon ion-md-checkmark icon-small"></i>Order 24/7
               </li>
               <li>
-                <i class="icon ion-md-checkmark icon-small"></i></ion-icon>Access to newest creations
+                <i class="icon ion-md-checkmark icon-small"></i>Access to newest creations
               </li>
               <li>
-                <i class="icon ion-md-checkmark icon-small"></i></ion-icon>Free delivery
+                <i class="icon ion-md-checkmark icon-small"></i>Free delivery
               </li>
             </ul>
           </div>
@@ -345,16 +366,16 @@
           <div>
             <ul>
               <li>
-                <i class="icon ion-md-checkmark icon-small"></i></ion-icon>1 meal
+                <i class="icon ion-md-checkmark icon-small"></i>1 meal
               </li>
               <li>
-                <i class="icon ion-md-checkmark icon-small"></i></ion-icon>Order from 8 am to 12 pm
+                <i class="icon ion-md-checkmark icon-small"></i>Order from 8 am to 12 pm
               </li>
               <li>
                 <i class="icon ion-md-close icon-small"></i>
               </li>
               <li>
-                <i class="icon ion-md-checkmark icon-small"></i></ion-icon>Free delivery
+                <i class="icon ion-md-checkmark icon-small"></i>Free delivery
               </li>
             </ul>
           </div>
@@ -473,10 +494,14 @@
     </div>
   </footer>
 
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+  <script src="vendors/js/noframework.waypoints.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+  <script src="resources/js/quickScroll.js"></script>
+  <script src="resources/js/script.js"></script>
+</body>
 
 </html>

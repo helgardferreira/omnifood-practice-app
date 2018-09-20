@@ -228,6 +228,15 @@ header {
     margin-top: 30px;
 }
 
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+/* Main Nav */
 .main-nav {
     float: right;
     list-style: none;
@@ -254,6 +263,49 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #ec38bc;
+}
+
+/* Mobile Nav */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon ion-icon {
+    font-size: 200%;
+    color: #fdeff9;
+}
+
+/* Sticky Nav */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    -webkit-box-shadow: 0 2px 2px #efefef;
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav {
+    margin-top: 18px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 18px 0;
+    color: #555;
+}
+
+.sticky .logo {
+    display: none;
+}
+
+.sticky .logo-black {
+    display: block;
 }
 
 /* ---------------------------------------------------------------------------------- */
@@ -313,14 +365,8 @@ header {
 /* ---------------------------------------------------------------------------------- */
 
 .section-steps {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgb(244, 229, 255)),
-        to(rgb(253, 239, 249))
-    );
-    background-image: linear-gradient(rgb(244, 229, 255), rgb(253, 239, 249));
+    background-color: #03001e;
+    color: #fdeff9;
 }
 
 .steps-box:first-child {
@@ -340,6 +386,13 @@ header {
 
 .works-step {
     margin-bottom: 50px;
+}
+
+.works-step p {
+    width: 75%;
+    margin-left: 25%;
+    font-size: 120%;
+    font-weight: 400;
 }
 
 .works-step div {
@@ -381,10 +434,10 @@ header {
         linear,
         left top,
         left bottom,
-        from(rgb(253, 239, 249)),
-        to(rgb(244, 229, 255))
+        from(#f4e5ff),
+        to(#fdeff9)
     );
-    background-image: linear-gradient(rgb(253, 239, 249), rgb(244, 229, 255));
+    background-image: linear-gradient(#f4e5ff, #fdeff9);
 }
 
 .box img {
@@ -596,4 +649,12 @@ footer p {
     margin-top: 20px;
     color: #dc15a7;
     text-align: center;
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* ANIMATIONS */
+/* ---------------------------------------------------------------------------------- */
+
+html.sr .load-hidden {
+    visibility: hidden;
 }
