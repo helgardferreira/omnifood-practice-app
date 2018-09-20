@@ -37,21 +37,21 @@ function loadEvents() {
         duration: 1000,
         origin: 'bottom',
         distance: '250px',
-        viewFactor: 0.7,
+        viewFactor: 0.9,
     });
 
     sr.reveal('.fade-left', {
         duration: 1500,
         origin: 'left',
         distance: '250px',
-        viewFactor: 0.6,
+        viewFactor: 0.8,
     });
 
     sr.reveal('.fade-right', {
         duration: 1500,
         origin: 'right',
         distance: '250px',
-        viewFactor: 0.6,
+        viewFactor: 0.8,
     });
 
     new Waypoint({
