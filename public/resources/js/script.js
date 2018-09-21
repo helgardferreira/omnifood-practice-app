@@ -52,16 +52,18 @@ function loadEvents() {
 
     sr.reveal('.fade-left', {
         duration: 1500,
+        delay: 2000,
         origin: 'left',
         distance: '250px',
-        viewFactor: 1,
+        viewFactor: 0.5,
     });
 
     sr.reveal('.fade-right', {
         duration: 1500,
+        delay: 2000,
         origin: 'right',
         distance: '250px',
-        viewFactor: 1,
+        viewFactor: 0.5,
     });
 
     new Waypoint({
