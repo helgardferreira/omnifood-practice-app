@@ -36,36 +36,6 @@ function loadEvents() {
         offset: '60px',
     });
 
-    window.sr = ScrollReveal();
-
-    sr.reveal('#_waypoint-features', {
-        duration: 2000,
-        viewFactor: 0.2,
-    });
-
-    sr.reveal('.app-screen', {
-        duration: 1000,
-        origin: 'bottom',
-        distance: '250px',
-        viewFactor: 0.7,
-    });
-
-    sr.reveal('.fade-left', {
-        duration: 1500,
-        delay: 1000,
-        origin: 'left',
-        distance: '250px',
-        viewFactor: 0.4,
-    });
-
-    sr.reveal('.fade-right', {
-        duration: 1500,
-        delay: 1000,
-        origin: 'right',
-        distance: '250px',
-        viewFactor: 0.4,
-    });
-
     new Waypoint({
         element: document.getElementById('_premium'),
         handler: () =>
@@ -108,3 +78,33 @@ function loadEvents() {
         icon.setAttribute('name', 'menu');
     }
 }
+
+window.sr = ScrollReveal();
+
+sr.reveal('#_waypoint-features', {
+    duration: 2000,
+    viewFactor: 0.2,
+});
+
+sr.reveal('.app-screen', {
+    duration: 1000,
+    origin: 'bottom',
+    distance: '250px',
+    viewFactor: 0.7,
+});
+
+sr.reveal('.fade-left', {
+    duration: 1500,
+    delay: 1000,
+    origin: 'left',
+    distance: '250px',
+    viewFactor: 0.4,
+});
+
+sr.reveal('.fade-right', {
+    duration: 1500,
+    delay: 1000,
+    origin: 'right',
+    distance: '250px',
+    viewFactor: 0.4,
+});
