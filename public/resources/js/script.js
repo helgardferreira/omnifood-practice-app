@@ -90,12 +90,12 @@ sr.reveal('.app-screen', {
     duration: 1000,
     origin: 'bottom',
     distance: '250px',
-    viewFactor: 0.7,
+    viewFactor: 0.5,
 });
 
 sr.reveal('.fade-left', {
     duration: 1500,
-    delay: 1000,
+    delay: 500,
     origin: 'left',
     distance: '250px',
     viewFactor: 0.4,
@@ -103,7 +103,7 @@ sr.reveal('.fade-left', {
 
 sr.reveal('.fade-right', {
     duration: 1500,
-    delay: 1000,
+    delay: 500,
     origin: 'right',
     distance: '250px',
     viewFactor: 0.4,
